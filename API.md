@@ -25,6 +25,20 @@ def bitmap_to_bytes(image):
   return bytes
 ```
 
+# Cup Number to Bluetooth ID Mapping
+
+The Paulig Muki REST API has an endpoint for mapping the cup number (printed on the bottom of the Muki) to its Bluetooth device name:
+
+https://back.pauligmuki.fi/smartcc/rest/V1/number/long/%s (replace the %s with the 7-digit zero-padded cup number).
+
+The endpoint will respond with a JSON blob like
+
+```
+{"code":"0","result":{"number":"PAULIG_MUKI_C0FFEE"}}
+```
+
+where the `number` field corresponds to the Bluetooth device name.
+
 # Services
 
 ## Main Service
